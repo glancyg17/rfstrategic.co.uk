@@ -90,13 +90,8 @@
   .section-head{max-width:56ch;margin-bottom:44px;}
   .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-top:10px;}
 
-  /* APPROACH — parallax photo backdrop + floating process card */
-  .parallax{position:relative;background-size:cover;background-position:center;background-attachment:fixed;}
-  @media(max-width:900px){.parallax{background-attachment:scroll;}}
-  .approach-panel{min-height:54vh;display:flex;align-items:flex-end;
-    background-image:url('https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=1800&q=80');}
-  .scrim-light{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,27,48,0.15) 0%,rgba(20,27,48,0.68) 100%);}
-  .process-card{position:relative;z-index:3;width:100%;background:var(--card);padding:52px 0 56px;border-top:3px solid var(--red);}
+  /* APPROACH — clean card section, no photo backdrop */
+  .approach-section{background:var(--card);padding:64px 0 56px;border-top:3px solid var(--red);}
   .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
   @media(max-width:800px){.process-grid{grid-template-columns:1fr 1fr;}}
   .step .num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--red);}
@@ -115,14 +110,12 @@
   .card h3{font-size:17px;margin:16px 0 8px;color:#fff;}
   .card p{font-size:14.5px;color:var(--on-dark-soft);margin:0;}
 
-  /* PROOF PANEL — photo backdrop, testimonial overlay */
-  .proof-panel{min-height:66vh;display:flex;align-items:center;
-    background-image:url('https://images.pexels.com/photos/1181611/pexels-photo-1181611.jpeg?auto=compress&cs=tinysrgb&w=1800&q=80');}
-  .scrim-dark{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,27,48,0.6) 0%,rgba(20,27,48,0.88) 100%);}
-  .testi-card{position:relative;z-index:2;background:rgba(20,27,48,0.6);backdrop-filter:blur(3px);padding:48px 42px;max-width:740px;margin:0 28px;border-left:3px solid var(--red);color:#fff;}
-  .testi-card blockquote{font-family:'Newsreader',serif;font-size:clamp(1.2rem,2.3vw,1.6rem);line-height:1.45;font-weight:500;}
-  .testi-card .attrib{margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--on-dark-soft);}
-  .placeholder-tag{display:inline-block;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:11px;background:rgba(195,31,45,0.18);color:#F0A9AF;padding:5px 10px;border-radius:var(--radius);}
+  /* RESULTS — light card section, no photo backdrop */
+  .results-section{background:var(--card);padding:90px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .testi-card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);padding:44px 42px;max-width:740px;}
+  .testi-card blockquote{font-family:'Newsreader',serif;font-size:clamp(1.2rem,2.3vw,1.6rem);line-height:1.45;font-weight:500;color:var(--ink);}
+  .testi-card .attrib{margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--on-light-soft);}
+  .placeholder-tag{display:inline-block;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:11px;background:rgba(195,31,45,0.1);color:var(--red-deep);padding:5px 10px;border-radius:var(--radius);}
 
   /* ABOUT — text + Robert photo cluster */
   .about{padding:90px 0;background:var(--paper);}
@@ -194,10 +187,7 @@
   </div>
 </div>
 
-<section id="approach" class="parallax approach-panel">
-  <div class="scrim-light"></div>
-</section>
-<div class="process-card">
+<section id="approach" class="approach-section">
   <div class="wrap">
     <div class="section-head reveal-left">
       <span class="eyebrow">Approach</span>
@@ -210,7 +200,7 @@
       <div class="step reveal-up"><div class="num">04</div><h3>Grow</h3><p>We track what's working and adjust — growth is a loop, not a one-off.</p></div>
     </div>
   </div>
-</div>
+</section>
 
 <section id="services" class="services">
   <div class="wrap">
@@ -227,13 +217,14 @@
   </div>
 </section>
 
-<section class="parallax proof-panel">
-  <div class="scrim-dark"></div>
-  <div class="testi-card reveal-up">
-    <span class="eyebrow" style="color:#F0A9AF;">Results</span>
-    <blockquote>"RF Strategic gave us a plan we could actually run — not another report that sat in a drawer."</blockquote>
-    <div class="attrib">— Placeholder quote · swap for a real client name once available</div>
-    <span class="placeholder-tag">Needs a real testimonial before launch</span>
+<section class="results-section">
+  <div class="wrap">
+    <div class="testi-card reveal-up">
+      <span class="eyebrow">Results</span>
+      <blockquote>"RF Strategic gave us a plan we could actually run — not another report that sat in a drawer."</blockquote>
+      <div class="attrib">— Placeholder quote · swap for a real client name once available</div>
+      <span class="placeholder-tag">Needs a real testimonial before launch</span>
+    </div>
   </div>
 </section>
 
