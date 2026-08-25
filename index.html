@@ -58,10 +58,8 @@
   /* HERO — photo contained within the section, not pinned to the viewport */
   .hero-section{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:center;overflow:hidden;}
   .hero-bg{position:absolute;inset:0;
-    background-image:url('https://images.pexels.com/photos/4049519/pexels-photo-4049519.png?auto=compress&cs=tinysrgb&w=1800&q=80');
+    background-image:url('assets/rf-banner.jpg');
     background-size:cover;background-position:center;background-color:var(--ink);z-index:0;}
-  .hero-banner-top{position:absolute;top:32px;left:0;right:0;z-index:2;display:flex;justify-content:center;padding:0 24px;}
-  .hero-banner-top img{width:100%;max-width:600px;height:auto;display:block;border-radius:var(--radius);box-shadow:0 14px 32px rgba(0,0,0,0.28);}
   .hero-section .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,27,48,0.2) 0%,rgba(20,27,48,0.45) 100%);}
   .hero-content{position:relative;z-index:2;color:#fff;padding:60px 0;}
   .hero-card{background:rgba(20,27,48,0.72);backdrop-filter:blur(6px);border-radius:var(--radius);padding:44px 48px;max-width:640px;}
@@ -162,9 +160,6 @@
 <section class="hero-section">
   <div class="hero-bg"></div>
   <div class="scrim"></div>
-  <div class="hero-banner-top">
-    <img src="assets/rf-banner.jpg" alt="RF Strategic — Driving revenue and strategy">
-  </div>
   <div class="wrap hero-content reveal-left">
     <div class="hero-card">
       <p class="eyebrow">Built for businesses ready to execute</p>
@@ -286,7 +281,7 @@
   </div>
   <div class="wrap foot-bottom">
     <span>© 2026 RF Strategic Ltd. — site in progress, see README</span>
-    <span>Logo, banner &amp; founder photo: real RF Strategic assets · other photography: temporary stock (Pexels), replace before launch</span>
+    <span>Logo, hero background &amp; founder photo: real RF Strategic assets — no stock photography on this page</span>
   </div>
 </footer>
 
