@@ -55,18 +55,21 @@
   @media(max-width:800px){.navlinks{display:none;}}
   .navcta{font-family:'IBM Plex Mono',monospace;font-size:13px;background:var(--red);color:#fff;padding:9px 16px;border-radius:var(--radius);}
 
-  /* HERO — fixed photo layer, stable on mobile */
+  /* HERO — photo contained within the section, not pinned to the viewport */
   .hero-section{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:center;overflow:hidden;}
-  .hero-bg{position:fixed;top:0;left:0;right:0;height:100vh;height:100svh;
+  .hero-bg{position:absolute;inset:0;
     background-image:url('https://images.pexels.com/photos/4049519/pexels-photo-4049519.png?auto=compress&cs=tinysrgb&w=1800&q=80');
     background-size:cover;background-position:center;background-color:var(--ink);z-index:0;}
-  .hero-section .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,27,48,0.45) 0%,rgba(20,27,48,0.88) 100%);}
+  .hero-banner-top{position:absolute;top:32px;left:0;right:0;z-index:2;display:flex;justify-content:center;padding:0 24px;}
+  .hero-banner-top img{width:100%;max-width:600px;height:auto;display:block;border-radius:var(--radius);box-shadow:0 14px 32px rgba(0,0,0,0.28);}
+  .hero-section .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,27,48,0.2) 0%,rgba(20,27,48,0.45) 100%);}
   .hero-content{position:relative;z-index:2;color:#fff;padding:60px 0;}
-  .hero-content h1{font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.1;margin:16px 0 20px;max-width:14ch;}
+  .hero-card{background:rgba(20,27,48,0.72);backdrop-filter:blur(6px);border-radius:var(--radius);padding:44px 48px;max-width:640px;}
+  .hero-content h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.1;margin:16px 0 20px;}
   .hero-content h1 em{font-style:normal;color:var(--red);}
   .hero-content p{max-width:44ch;color:#C7CCDC;font-size:1.05rem;margin-bottom:32px;}
   .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
-  .scroll-hint{position:absolute;bottom:26px;left:28px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8891A8;letter-spacing:0.1em;}
+  .scroll-hint{position:absolute;bottom:26px;left:28px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#D9DDE6;letter-spacing:0.1em;background:rgba(20,27,48,0.6);backdrop-filter:blur(4px);padding:6px 12px;border-radius:var(--radius);}
 
   .reveal-up,.reveal-left,.reveal-right{opacity:0;transition:opacity 0.8s cubic-bezier(.2,.7,.3,1),transform 0.8s cubic-bezier(.2,.7,.3,1);}
   .reveal-up{transform:translateY(40px);}
@@ -77,9 +80,6 @@
   .stagger>*:nth-child(2){transition-delay:0.1s;}
   .stagger>*:nth-child(3){transition-delay:0.2s;}
   .stagger>*:nth-child(4){transition-delay:0.3s;}
-
-  .brand-strip{position:relative;z-index:3;background:var(--ink);border-bottom:1px solid rgba(255,255,255,0.08);}
-  .brand-strip img{width:100%;height:auto;display:block;max-height:340px;object-fit:cover;object-position:center;}
 
   .trust{position:relative;z-index:3;background:var(--card);border-bottom:1px solid var(--line);padding:40px 0;}
   .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;font-size:14px;}
@@ -162,21 +162,22 @@
 <section class="hero-section">
   <div class="hero-bg"></div>
   <div class="scrim"></div>
+  <div class="hero-banner-top">
+    <img src="assets/rf-banner.jpg" alt="RF Strategic — Driving revenue and strategy">
+  </div>
   <div class="wrap hero-content reveal-left">
-    <p class="eyebrow">UK business consulting &amp; sales solutions</p>
-    <h1>Driving revenue through <em>strategic clarity.</em></h1>
-    <p>RF Strategic partners with ambitious businesses to build the sales strategy and operating plan that actually gets run — not a slide deck that sits in a drawer.</p>
-    <div class="cta-row">
-      <a href="#contact" class="btn btn-red">Book a consultation</a>
-      <a href="#approach" class="btn btn-ghost">See how it works →</a>
+    <div class="hero-card">
+      <p class="eyebrow">Built for businesses ready to execute</p>
+      <h1>A plan that gets <em>run,</em> not just written.</h1>
+      <p>We partner with ambitious businesses to turn strategy into a sales operation that actually moves the number — not another report that sits in a drawer.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-red">Book a consultation</a>
+        <a href="#approach" class="btn btn-ghost">See how it works →</a>
+      </div>
     </div>
   </div>
   <div class="scroll-hint">SCROLL ↓</div>
 </section>
-
-<div class="brand-strip">
-  <img src="assets/rf-banner.jpg" alt="RF Strategic — Driving revenue and strategy">
-</div>
 
 <div class="trust">
   <div class="wrap trust-row reveal-up">
