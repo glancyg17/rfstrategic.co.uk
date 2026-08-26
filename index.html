@@ -91,11 +91,23 @@
 
   /* APPROACH — clean card section, no photo backdrop */
   .approach-section{background:var(--card);padding:64px 0 56px;border-top:3px solid var(--red);}
-  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-  @media(max-width:800px){.process-grid{grid-template-columns:1fr 1fr;}}
-  .step .num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--red);}
-  .step h3{font-size:17px;margin:10px 0 8px;}
+  .process-flow{display:flex;align-items:stretch;}
+  .step{flex:1;padding:0 22px;}
+  .step:first-child{padding-left:0;}
+  .step:last-child{padding-right:0;}
+  .flow-arrow{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:44px;color:var(--red);}
+  .flow-arrow svg{width:36px;height:22px;}
+  @media(max-width:800px){
+    .process-flow{flex-direction:column;}
+    .step{padding:0;}
+    .flow-arrow{width:auto;height:34px;transform:rotate(90deg);}
+  }
+  .step h3{font-size:17px;margin:0 0 8px;}
   .step p{font-size:14px;color:var(--on-light-soft);}
+  .process-flow .step:nth-child(1){transition-delay:0s;}
+  .process-flow .step:nth-child(3){transition-delay:0.12s;}
+  .process-flow .step:nth-child(5){transition-delay:0.24s;}
+  .process-flow .step:nth-child(7){transition-delay:0.36s;}
 
   .services{background:var(--ink);color:#fff;padding:88px 0;}
   .services .section-head p{color:var(--on-dark-soft);margin-top:12px;font-size:15.5px;}
@@ -206,7 +218,7 @@
       <span class="eyebrow">About</span>
       <h2 style="font-size:clamp(1.5rem,3vw,2rem);margin-top:10px;">Built on one idea: most businesses don't need more advice.</h2>
       <p>They need someone who'll help build the plan and stay to help run it. RF Strategic exists to be that partner — direct, practical, and focused on outcomes you can measure.</p>
-      <p><em>Robert's full bio goes here once confirmed — background, years in sales/consulting, why RF Strategic exists.</em></p>
+      <p><em>Robert — this is where your bio goes. A couple of paragraphs on your background, years in sales/consulting, and why you started RF Strategic. Send it over whenever you're ready and I'll drop it in.</em></p>
     </div>
     <div class="about-media reveal-right">
       <div class="primary-photo">
@@ -232,11 +244,14 @@
       <span class="eyebrow">Approach</span>
       <h2>How an engagement runs</h2>
     </div>
-    <div class="process-grid stagger">
-      <div class="step reveal-up"><div class="num">01</div><h3>Assess</h3><p>What's actually happening: pipeline, pricing, and process — not assumptions.</p></div>
-      <div class="step reveal-up"><div class="num">02</div><h3>Strategize</h3><p>A plan built for your market and your team, not a repackaged playbook.</p></div>
-      <div class="step reveal-up"><div class="num">03</div><h3>Execute</h3><p>We work alongside you to put it into practice, not hand over a document.</p></div>
-      <div class="step reveal-up"><div class="num">04</div><h3>Grow</h3><p>We track what's working and adjust — growth is a loop, not a one-off.</p></div>
+    <div class="process-flow">
+      <div class="step reveal-up"><h3>Assess</h3><p>What's actually happening: pipeline, pricing, and process — not assumptions.</p></div>
+      <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 40 24"><line x1="2" y1="12" x2="30" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="24,6 32,12 24,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step reveal-up"><h3>Strategize</h3><p>A plan built for your market and your team, not a repackaged playbook.</p></div>
+      <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 40 24"><line x1="2" y1="12" x2="30" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="24,6 32,12 24,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step reveal-up"><h3>Execute</h3><p>We work alongside you to put it into practice, not hand over a document.</p></div>
+      <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 40 24"><line x1="2" y1="12" x2="30" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="24,6 32,12 24,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step reveal-up"><h3>Grow</h3><p>We track what's working and adjust — growth is a loop, not a one-off.</p></div>
     </div>
   </div>
 </section>
@@ -261,8 +276,8 @@
     <div class="testi-card reveal-up">
       <span class="eyebrow">Results</span>
       <blockquote>"RF Strategic gave us a plan we could actually run — not another report that sat in a drawer."</blockquote>
-      <div class="attrib">— Placeholder quote · swap for a real client name once available</div>
-      <span class="placeholder-tag">Needs a real testimonial before launch</span>
+      <div class="attrib">— Placeholder quote, written by me for now. Swap in a real client's words and name once you've got one.</div>
+      <span class="placeholder-tag">Send me a real testimonial before we launch</span>
     </div>
   </div>
 </section>
@@ -337,8 +352,8 @@
     <div>
       <h3>Get in touch</h3>
       <ul>
-        <li>Email — TBC</li>
-        <li>Phone — TBC</li>
+        <li><a href="mailto:solutions@rfstrategic.co.uk">solutions@rfstrategic.co.uk</a></li>
+        <li><a href="tel:+447398978007">+44 7398 978007</a></li>
         <li>Mon–Fri, 9am–5pm</li>
       </ul>
     </div>
