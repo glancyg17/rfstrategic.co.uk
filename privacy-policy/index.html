@@ -6,34 +6,122 @@
 <title>Privacy Policy — RF Strategic Ltd.</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="../assets/rf-icon.png" type="image/png">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  body{margin:0;background:#EDEAE2;color:#141B30;font-family:'Manrope',sans-serif;line-height:1.7;}
-  .wrap{max-width:720px;margin:0 auto;padding:64px 24px 100px;}
-  h1{font-family:'Newsreader',serif;font-weight:500;font-size:32px;margin-bottom:8px;}
-  h2{font-family:'Newsreader',serif;font-weight:500;font-size:20px;margin:36px 0 10px;}
-  p{color:#3A3F52;margin:0 0 14px;}
-  a{color:#C31F2D;}
-  .draft-note{background:#FBEAEA;border-left:3px solid #C31F2D;padding:14px 18px;font-size:13.5px;color:#7A1520;margin-bottom:36px;}
-  .back{display:inline-block;margin-top:40px;font-size:14px;}
+  :root{
+    --ink:#141B30;
+    --red:#C31F2D;
+    --red-deep:#8F1620;
+    --paper:#EDEAE2;
+    --card:#F7F5EF;
+    --line:#DAD4C5;
+    --on-dark-soft:#B7BECB;
+    --on-light-soft:#5C5F6C;
+    --radius:3px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.7;}
+  h1,h2,h3{font-family:'Newsreader',serif;font-weight:500;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+
+  /* HEADER — same as homepage */
+  header{position:sticky;top:0;z-index:100;background:rgba(20,27,48,0.9);backdrop-filter:blur(6px);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Newsreader',serif;font-size:19px;color:#fff;}
+  .logo img{height:34px;width:auto;display:block;}
+  .logo span{color:var(--red);}
+  .navlinks{display:flex;gap:30px;font-size:14px;color:#C7CCDC;}
+  .navlinks a:hover{color:#fff;}
+  @media(max-width:800px){.navlinks{display:none;}}
+  .navcta{font-family:'IBM Plex Mono',monospace;font-size:13px;background:rgba(195,31,45,0.72);color:#fff;padding:9px 16px;border-radius:var(--radius);border:1px solid rgba(195,31,45,0.85);}
+  .navcta:hover{background:rgba(195,31,45,0.9);}
+
+  /* CONTENT */
+  main.wrap{max-width:720px;padding:64px 24px 100px;}
+  h1{font-size:32px;margin-bottom:8px;}
+  h2{font-size:20px;margin:36px 0 10px;}
+  p{color:var(--on-light-soft);margin:0 0 14px;}
+  main a{color:var(--red);text-decoration:underline;}
+  .draft-note{background:#FBEAEA;border-left:3px solid var(--red);padding:14px 18px;font-size:13.5px;color:#7A1520;margin-bottom:36px;}
+  .back{display:inline-block;margin-top:40px;font-size:14px;text-decoration:none;color:var(--red);}
+
+  /* FOOTER — same as homepage */
+  footer{background:var(--card);border-top:1px solid var(--line);padding:60px 0 36px;}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+  @media(max-width:800px){.foot-grid{grid-template-columns:1fr;}}
+  footer h3{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;margin-bottom:12px;}
+  footer p,footer li{font-size:14px;color:var(--on-light-soft);margin:0 0 5px;}
+  footer ul{list-style:none;}
+  footer a:hover{color:var(--red);}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:22px;font-size:12.5px;color:#8A8375;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
 </style>
 </head>
 <body>
-<div class="wrap">
+
+<header>
+  <nav class="wrap">
+    <a href="/" class="logo"><img src="../assets/rf-icon.png" alt="RF Strategic mark"> <span>Strategic</span></a>
+    <div class="navlinks">
+      <a href="/#about">About</a>
+      <a href="/#approach">Approach</a>
+      <a href="/#services">Services</a>
+    </div>
+    <a class="navcta" href="/#contact">Book a consultation</a>
+  </nav>
+</header>
+
+<main class="wrap">
   <div class="draft-note">Draft placeholder — this page has not had legal review. Replace with a policy checked against RF Strategic's actual data practices and applicable law before the site goes live.</div>
   <h1>Privacy Policy</h1>
   <p>This site is currently a build-in-progress for RF Strategic Ltd.</p>
 
   <h2>What this site collects today</h2>
-  <p>At this stage, the site has no analytics, advertising pixels, or tracking cookies installed. No personal data is currently collected through this site beyond what a visitor submits directly (for example, via a contact form or booking link), if one is added.</p>
+  <p>At this stage, the site has no analytics, advertising pixels, or tracking cookies installed. The contact form on the homepage sends what you type (name, email, phone, message) directly to RF Strategic's inbox via a third-party form service — nothing else is collected.</p>
 
   <h2>If tracking is added later</h2>
   <p>Should analytics or advertising tracking (such as a Meta Pixel or similar) be added in future, this page will be updated to accurately describe what's collected, why, and how visitors can opt out — consistent with UK GDPR and PECR requirements.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy: contact details to be added.</p>
+  <p>Questions about this policy: <a href="mailto:solutions@rfstrategic.co.uk">solutions@rfstrategic.co.uk</a></p>
 
-  <a class="back" href="../">← Back to homepage</a>
-</div>
+  <a class="back" href="/">← Back to homepage</a>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+        <img src="../assets/rf-icon.png" alt="RF Strategic mark" style="height:26px;width:auto;">
+        <h3 style="margin:0;">RF Strategic Ltd.</h3>
+      </div>
+      <p>Business consulting and sales solutions built around measurable growth.</p>
+    </div>
+    <div>
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#approach">Approach</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/privacy-policy/">Privacy policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="mailto:solutions@rfstrategic.co.uk">solutions@rfstrategic.co.uk</a></li>
+        <li><a href="tel:+447398978007">+44 7398 978007</a></li>
+        <li>Mon–Fri, 9am–5pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 RF Strategic Ltd. — site in progress, see README</span>
+    <span>Logo, hero background &amp; founder photo: real RF Strategic assets — no stock photography on this page</span>
+  </div>
+</footer>
+
 </body>
 </html>
