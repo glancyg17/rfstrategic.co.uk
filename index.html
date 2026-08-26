@@ -70,6 +70,18 @@
   .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
   .scroll-hint{position:absolute;bottom:26px;left:28px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#D9DDE6;letter-spacing:0.1em;background:rgba(20,27,48,0.6);backdrop-filter:blur(4px);padding:6px 12px;border-radius:var(--radius);}
 
+  /* Mobile: the wide banner crops badly as a cover background, so stack it
+     as a normal uncropped image above the copy instead of behind it. */
+  .hero-mobile-banner{display:none;}
+  @media(max-width:800px){
+    .hero-section{display:block;min-height:auto;padding-top:0;}
+    .hero-bg,.hero-section .scrim,.scroll-hint{display:none;}
+    .hero-mobile-banner{display:block;}
+    .hero-mobile-banner img{width:100%;height:auto;display:block;}
+    .hero-content{padding:0;background:var(--ink);}
+    .hero-card{max-width:none;border-radius:0;backdrop-filter:none;padding:36px 24px 44px;}
+  }
+
   .reveal-up,.reveal-left,.reveal-right{opacity:0;transition:opacity 0.8s cubic-bezier(.2,.7,.3,1),transform 0.8s cubic-bezier(.2,.7,.3,1);}
   .reveal-up{transform:translateY(40px);}
   .reveal-left{transform:translateX(-48px);}
@@ -185,7 +197,7 @@
 
 <header>
   <nav class="wrap">
-    <div class="logo"><img src="assets/rf-icon.png" alt="RF Strategic mark"> <span>Strategic</span></div>
+    <a href="/" class="logo"><img src="assets/rf-icon.png" alt="RF Strategic mark"> <span>Strategic</span></a>
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
@@ -198,6 +210,9 @@
 <section class="hero-section">
   <div class="hero-bg"></div>
   <div class="scrim"></div>
+  <div class="hero-mobile-banner">
+    <img src="assets/rf-banner.jpg" alt="RF Strategic — Driving revenue and strategy">
+  </div>
   <div class="wrap hero-content reveal-left">
     <div class="hero-card">
       <p class="eyebrow">Built for businesses ready to execute</p>
