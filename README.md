@@ -23,7 +23,7 @@ Static one-page site. No build step — plain HTML/CSS, deployable as-is on GitH
 **Real:** logo, banner, and Robert's headshot in `assets/`.
 
 **Still placeholder — replace before launch:**
-- Hero, approach-section, and results-section backdrop photos are hotlinked from Pexels (free stock, no attribution required, but not self-hosted). Swap for real office/team photography and move the files into `assets/` when available.
+- Hero backdrop photo is hotlinked from Pexels (free stock, no attribution required, but not self-hosted). It's now the *only* stock photo on the page — the approach and results sections were simplified to flat card panels rather than photo backdrops, so download this one and move it into `assets/` when you have a real office/skyline shot to swap in.
 - Results/testimonial quote is written copy, not a real client quote.
 - Robert's bio paragraph in the About section is a placeholder line.
 - Contact details (email, phone, WhatsApp) are marked "TBC" in the CTA band and footer.
